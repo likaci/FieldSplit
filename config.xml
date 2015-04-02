@@ -1,14 +1,54 @@
-<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Name>FieldSplit</Name><AddInID>{a4dabe5a-b141-4007-9be3-baa78b24ecef}</AddInID><Description>Split Field</Description><Version>0.1</Version><Image /><Author>liuwencai</Author><Company>liuwencai</Company><Date>03/24/2015</Date><Targets><Target name="Desktop" version="10.2" /></Targets><AddIn language="PYTHON" library="FieldSplit_addin.py" namespace="FieldSplit_addin"><ArcMap>
-    <Commands>
-        <ComboBox caption="&#36873;&#25321;&#35201;&#32032;&#31867;: " category="FieldSplit" class="ComboBoxFeatureClass" id="FieldSplit_addin.comboboxFeatureClass" itemSizeString="WWWWWW" message="" rows="4" sizeString="WWWWWW" tip="&#36873;&#25321;&#35201;&#22788;&#29702;&#30340;&#35201;&#32032;&#31867;"><Help heading="" /></ComboBox>
-        <ComboBox caption="&#36873;&#25321;&#23383;&#27573;: " category="FieldSplit" class="ComboBoxFields" id="FieldSplit_addin.comboboxFidlds" itemSizeString="WWWWWW" message="" rows="4" sizeString="WWWWWW" tip="&#36873;&#25321;&#35201;&#22788;&#29702;&#30340;&#23383;&#27573;"><Help heading="" /></ComboBox>
-        <Button caption="&#22788;&#29702;" category="FieldSplit" class="ButtonProcess" id="FieldSplit_addin.buttonProcess" image="" message="" tip=""><Help heading="" /></Button>
-        </Commands>
-    <Extensions>
-        </Extensions>
-    <Toolbars>
-        <Toolbar caption="FieldSplit" category="FieldSplit" id="FieldSplit_addin.toolbar" showInitially="true"><Items><ComboBox refID="FieldSplit_addin.comboboxFeatureClass" /><ComboBox refID="FieldSplit_addin.comboboxFidlds" /><Button refID="FieldSplit_addin.buttonProcess" /></Items></Toolbar>
-        </Toolbars>
-    <Menus>
-        </Menus>
-    </ArcMap></AddIn></ESRI.Configuration>
+<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Name>字段分割</Name>
+    <AddInID>{a4dabe5a-b141-4007-9be3-baa78b24ecef}</AddInID>
+    <Description>字段分割</Description>
+    <Version>0.2</Version>
+    <Image/>
+    <Author>liuwencai</Author>
+    <Company>liuwencai</Company>
+    <Date>03/24/2015</Date>
+    <Targets>
+        <Target name="Desktop" version="10.2"/>
+    </Targets>
+    <AddIn language="PYTHON" library="FieldSplit_addin.py" namespace="FieldSplit_addin">
+        <ArcMap>
+            <Commands>
+                <ComboBox caption="&#36873;&#25321;&#35201;&#32032;&#31867;: " category="FieldSplit"
+                          class="ComboBoxFeatureClass" id="FieldSplit_addin.comboboxFeatureClass"
+                          itemSizeString="WWWWWW" message="" rows="4" sizeString="WWWWWW"
+                          tip="&#36873;&#25321;&#35201;&#22788;&#29702;&#30340;&#35201;&#32032;&#31867;">
+                    <Help heading=""/>
+                </ComboBox>
+                <ComboBox caption="&#36873;&#25321;&#23383;&#27573;: " category="FieldSplit" class="ComboBoxFields"
+                          id="FieldSplit_addin.comboboxFidlds" itemSizeString="WWWWWW" message="" rows="4"
+                          sizeString="WWWWWW" tip="&#36873;&#25321;&#35201;&#22788;&#29702;&#30340;&#23383;&#27573;">
+                    <Help heading=""/>
+                </ComboBox>
+                <ComboBox caption="过滤文字: " category="FieldSplit" class="ComboBoxFieldFilter"
+                          id="FieldSplit_addin.comboboxFidldFilter" itemSizeString="WWWWWW" message="" rows="4"
+                          sizeString="WWWWWW" tip="留空自动分割">
+                    <Help heading=""/>
+                </ComboBox>
+                <Button caption="&#22788;&#29702;" category="FieldSplit" class="ButtonProcess"
+                        id="FieldSplit_addin.buttonProcess" image="" message="" tip="">
+                    <Help heading=""/>
+                </Button>
+            </Commands>
+            <Extensions>
+            </Extensions>
+            <Toolbars>
+                <Toolbar caption=" 字段分割" category=" 字段分割" id="FieldSplit_addin.toolbar" showInitially="true">
+                    <Items>
+                        <ComboBox refID="FieldSplit_addin.comboboxFeatureClass"/>
+                        <ComboBox refID="FieldSplit_addin.comboboxFidlds"/>
+                        <ComboBox refID="FieldSplit_addin.comboboxFidldFilter"/>
+                        <Button refID="FieldSplit_addin.buttonProcess"/>
+                    </Items>
+                </Toolbar>
+            </Toolbars>
+            <Menus>
+            </Menus>
+        </ArcMap>
+    </AddIn>
+</ESRI.Configuration>
