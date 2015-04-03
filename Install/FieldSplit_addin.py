@@ -36,8 +36,7 @@ class ButtonProcess(object):
             rowSet = set()
             for row in rows:
                 rowSet.add(row.getValue(field))
-            if len(rowSet) < 10 or (
-                        pythonaddins.MessageBox(u"所选字段种类: %d,\n是否继续生成" % len(rowSet), u"所选字段种类大于10", 1) is "Ok"):
+            if len(rowSet) < 10 or ( pythonaddins.MessageBox(u"所选字段种类: %d,\n是否继续生成" % len(rowSet), u"所选字段种类大于10", 1) == "OK"):
                 del row
                 print featureLayer.name + ", " + field
                 splitFeature(featureLayer, field, rowSet)
